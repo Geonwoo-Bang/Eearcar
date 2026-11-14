@@ -1,0 +1,40 @@
+{
+  "packageName": "com.example.eearcar",
+  "appDescription": "이어카는 차주가 앱에 저장한 충전카드 보관 위치, 반납 시간과 장소, 반납 조건, 전달사항을 조회하여 안내하는 앱입니다.",
+  "invokeWord": "이어카",
+  "version": "1.0",
+  "actionCalls": [
+    {
+      "type": "function",
+      "function": {
+        "name": "GET_EEARCAR_GUIDE",
+        "description": "이어카에 차주가 저장한 정보를 조회합니다. 충전카드 보관 위치, 반납 시간, 반납 장소, 반납 조건, 차주 전달사항을 물으면 호출합니다. 충전카드 위치는 차량 설명서가 아니라 차주가 앱에 저장한 정보를 사용합니다.",
+        "component": "activity",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "충전카드 위치는 charging_card, 반납 시간은 return_time, 반납 장소는 return_place, 반납 조건은 return_conditions, 차주 전달사항과 주의사항은 owner_notice를 선택합니다.",
+              "enum": [
+                "charging_card",
+                "return_time",
+                "return_place",
+                "return_conditions",
+                "owner_notice"
+              ]
+            },
+            "query": {
+              "type": "string",
+              "description": "사용자가 물어본 질문을 전달합니다. 예: 충전카드 어디 있어?, 몇 시까지 반납해야 해?, 반납 장소 알려줘."
+            }
+          },
+          "required": [
+            "topic",
+            "query"
+          ]
+        }
+      }
+    }
+  ]
+}

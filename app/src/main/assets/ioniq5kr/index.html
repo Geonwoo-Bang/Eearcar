@@ -1,0 +1,17 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>아이오닉 5 취급설명서</title><link rel="stylesheet" href="reader.css">
+<main><small>현대자동차 · 국내 2026년형</small><h1>아이오닉 5 취급설명서</h1><input id="search" type="search" placeholder="기능명이나 사용 방법 검색" aria-label="설명서 검색"><p id="count"></p><div id="results"></div></main><script src="data.js"></script><script>
+const search=document.getElementById('search'),results=document.getElementById('results'),count=document.getElementById('count');
+search.value=new URLSearchParams(location.search).get('q')||'';
+function element(tag,txt){const e=document.createElement(tag);e.textContent=txt;return e}
+function link(row){const a=element('a',row.title);a.href=row.page;return a}
+function render(){
+ results.replaceChildren();const q=search.value.trim().toLowerCase();
+ if(!q){count.textContent=rows.length+'개 항목';let group;for(const r of rows){if(!r.depth){group=document.createElement('details');group.append(element('summary',r.title));results.append(group)}const a=link(r);a.style.marginLeft=(r.depth*.7)+'em';group.append(a)}return}
+ const compact=q.replace(/\s/g,''),alias=/깜빡이|방향지시등/.test(q)&&/영상|카메라|계기판|옆쪽/.test(q)?'후측방 모니터':/차선.*(경고|이탈)|차로.*이탈/.test(q)?'차로 이탈방지 보조':'';
+ const terms=q.split(/\s+/).map(w=>w.replace(/(에서는|에서|으로|하고|하면|에는|을|를|이|가|에)$/,'')).filter(w=>w.length>1&&!['어떻게','싶어','알려줘','하는','하려면'].includes(w));
+ const ranked=rows.map(r=>{const t=r.title.toLowerCase(),body=r.body.toLowerCase();let s=t.replace(/\s/g,'').includes(compact)?50:0;if(body.replace(/\s/g,'').includes(compact))s+=5;if(alias&&(t.includes(alias)||r.path.includes(alias)))s+=20+(t.includes('설정')?10:0);for(const w of terms)s+=t.includes(w)?7:body.includes(w)?1:0;return [r,s]}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
+ count.textContent=ranked.length?ranked.length+'개 검색 결과':'검색 결과가 없습니다. 짧은 기능명으로 다시 검색하거나 전체 목차를 여세요.';
+ for(const [r] of ranked){const a=link(r);a.append(element('small',r.path));results.append(a)}
+}
+search.oninput=render;render();
+</script></html>

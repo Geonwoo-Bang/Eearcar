@@ -1,0 +1,108 @@
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="reader.css"><title>내비게이션 기반 스마트 크루즈 컨트롤 작동</title><div id="content-hyundai" class="content">
+        <div id="topic_rt2_nhl_c1c" class="ditatopic topiclevel-3  ">
+          <h3 id="5e5e11a5-60ef-496b-89d3-2f9cc910df42" class=" ">내비게이션 기반 스마트 크루즈 컨트롤 작동</h3>
+          <section id="section_eh4_qhl_c1c" class=" ">
+            <div class=" title ">작동 조건</div>
+            <p class=" ">내비게이션 기반 스마트 크루즈 컨트롤은 다음의 조건에 모두 해당하면 작동합니다.</p>
+            <ul id="ul_cjv_thl_c1c" class=" ">
+              <li class=" ">
+                <p class=" ">인포테인먼트 시스템의 설정에서 <span class=" uicontrol ">고속도로 주행속도 자동 조절</span> 설정</p>
+              </li>
+              <li class=" ">
+                <p class=" ">스마트 크루즈 컨트롤 작동 중</p>
+              </li>
+              <li class=" ">
+                <p class=" ">전용도로 주행 중</p>
+              </li>
+            </ul>
+          </section>
+          <section id="section_kw3_zhl_c1c" class=" ">
+            <div class=" title ">작동 상태 표시</div>
+            <p class=" ">내비게이션 기반 스마트 크루즈 컨트롤의 작동 상태는 클러스터에 <userinput class=" ">ǌ</userinput> 표시등으로 알립니다(1).</p>
+            <figure id="fig_zx2_b3l_c1c" class=" ">
+              <img id="image_ay2_b3l_c1c" src="media/6131122dce0e9fff31c29c18.png" class=" ">
+              <p class=" ">2C_NSCCStandbyInfo</p>
+            </figure>
+            <ul id="ul_yt1_c3l_c1c" class=" ">
+              <li class=" ">
+                <p class=" ">초록색: 작동 조건을 모두 만족 할 경우</p>
+              </li>
+              <li class=" ">
+                <p class=" ">초록색 점멸: 속도 제어 중일 경우</p>
+              </li>
+              <li class=" ">
+                <p class=" ">회색: 스마트 크루즈 컨트롤이 일시 해제나 경로 재탐색 등으로 제어를 할 수 없는 경우</p>
+              </li>
+              <li class=" ">
+                <p class=" ">흰색 점멸: 운전자가 가속 페달을 밟았을 경우</p>
+              </li>
+            </ul>
+          </section>
+          <section id="section_vkm_23l_c1c" class=" ">
+            <div class=" title ">고속도로 안전구간 자동감속</div>
+            <p class=" ">전용도로 본선에서 제한속도를 초과한 설정속도로 스마트 크루즈 컨트롤이 작동하는 경우, 안전구간의 제한속도에 따라 자동으로 감속합니다. 안전구간을 통과한 후에는 스마트 크루즈 컨트롤의 설정속도로 주행합니다.</p>
+            <div id="note_b5z_j3l_c1c" type="note" class=" note ">
+              <ul id="ul_n1g_l3l_c1c" class=" ">
+                <li class=" ">
+                  <p class=" ">감속 시작은 차량의 주행속도와 제한속도에 따라 다릅니다. 주행속도가 높으면 감속 시점이 빨라집니다.</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">고속도로 안전구간 자동감속 기능은 내비게이션이 카메라 안내에 따라 작동합니다. 내비게이션 카메라 안내 설정 방법은 인포테인먼트 시스템 웹 매뉴얼을 참고하십시오. </p>
+                </li>
+                <li class=" ">
+                  <p class=" ">구간 과속단속 구간에서 차량의 평균속도가 제한속도를 초과할 경우 제한속도보다 낮은 속도로 주행할 수 있습니다.</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">이동식 과속단속 구간의 경우 운전자의 안전을 위해 과속단속 안내 시점이 지난 후에도 일정 구간 동안 제한속도로 유지될 수 있습니다.</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">고속도로 안전구간 자동감속 기능이 작동하여 감속중에도 차량속도가 제한속도보다 높을 경우 경고음이 울릴 수 있습니다.</p>
+                </li>
+              </ul>
+            </div>
+            <div id="note_klq_vpl_c1c" type="note" class=" note ">
+              <p class=" ">스마트 크루즈 컨트롤 작동 방법은 &#x27;<a href="id0b7ede40a14.html#id2227B0ME0QN" class=" Cross-Reference fm:Title ">스마트 크루즈 컨트롤 (SCC)</a>&#x27;을 참고하십시오.</p>
+            </div>
+          </section>
+          <section id="section_ccs_m3l_c1c" class=" ">
+            <div class=" title ">고속도로 곡선구간 자동감속</div>
+            <p class=" ">전용도로 본선에서 안전한 속도로 곡선구간을 주행하도록 자동으로 감속합니다. 곡선구간을 통과한 후에는 스마트 크루즈 컨트롤의 설정속도로 주행합니다.</p>
+            <div id="note_s2b_43l_c1c" type="note" class=" note ">
+              <p class=" ">감속 시작 시점은 차량의 주행속도와 도로의 곡률에 따라 다릅니다. 주행속도가 높을수록 감속 시작 시점이 빨라집니다.</p>
+            </div>
+          </section>
+          <section id="section_w2f_q3l_c1c" class=" ">
+            <div class=" title ">고속도로 진출입로 자동감속</div>
+            <figure id="fig_ckz_s3l_c1c" class=" ">
+              <img id="image_dkz_s3l_c1c" src="media/64373e41e2ab67e68f363a9c.png" class=" ">
+              <p class=" ">2C_NSCCAutoDecelAtInterchange</p>
+              <ol id="sl_as1_fnl_c1c" class=" sl ">
+                <li class=" ">분기</li>
+                <li class=" ">분리</li>
+              </ol>
+            </figure>
+            <p class=" ">차량의 전방에 진출입로(IC, JC, 휴게소)가 있는 경우 안전한 속도로 진출입로를 주행하도록 곡률에 따라 자동으로 감속합니다. 진출입로를 통과한 후에는 스마트 크루즈 컨트롤의 설정속도로 주행합니다.</p>
+            <p class=" ">내비게이션에서 분기 형태의 진출입로로 경로를 안내하고 마지막 차로로 주행하는 경우, 진출입로 진입 전에 자동으로 감속합니다. 분리 형태의 진출입로라면 진입 전에 자동으로 감속하지 않습니다.</p>
+            <div id="note_kp5_v3l_c1c" type="note" class=" note ">
+              <p class=" ">감속 시작 시점은 차량의 주행속도와 진출입로의 곡률에 따라 달라집니다. 주행속도가 높을수록 감속 시작 시점이 빨라집니다.</p>
+            </div>
+            <div type="warning" id="note_gcq_w3l_c1c" class=" note ">
+              <p class=" ">다음과 같은 경우에 클러스터에 경고문이 표시됩니다.</p>
+              <ul id="ul_hcq_w3l_c1c" class=" ">
+                <li class=" ">
+                  <p class=" ">내비게이션 기반 스마트 크루즈 컨트롤이 안전한 속도까지 감속할 수 없을 경우</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">전방의 진출로가 매우 짧을 경우</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">예상 주행 경로를 판단할 수 없을 경우</p>
+                </li>
+                <li class=" ">
+                  <p class=" ">고속도로 및 자동차 전용도로 진출입로에서 일반도로 진입 전</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div><p><a href="https://ownersmanual.hyundai.com/full_webhelp/NE1/2026/ko_KR/topic_rt2_nhl_c1c.html">현대자동차 공식 원문 열기</a></p>
